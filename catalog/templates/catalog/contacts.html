@@ -1,0 +1,37 @@
+{% extends "catalog/base.html" %}
+{% block title %} Contacts {% endblock title %}
+{% block content %}
+
+
+        <div class="row mt-5">
+            <div class="col-5">
+                <form method="post">
+                    {% csrf_token %}
+                    <p>Имя</p>
+                    <input type="text" name="name" class="form-control">
+                    <p style="margin-top:20px">Почта</p>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail"
+                               aria-describedby="emailHelp">
+                    </div>
+                    <p style="margin-top:20px">Сообщение</p>
+                    <textarea name="message" class="form-control" id="exampleFormControlTextarea"
+                              rows="3"></textarea>
+                    <div class="col-6 mt-3">
+                        <input type="submit" class="btn btn-primary form-control" value="Отправить"/>
+                    </div>
+
+                </form>
+            </div>
+            <div style="margin-left:70px" class="col-5 ">
+                <h4>Наши контакты</h4>
+                <p>Здесь находится текст с информацией о наших контактных данных, через которые вы можете с нами
+                    связаться</p>
+                <p>Have a nice day! :)</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
